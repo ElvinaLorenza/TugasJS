@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>MODUL 4 JAVA SCRIPT</title>
+    </head>
+
+    <body>
+        <pre>
+            <h1>
+         NAMA : ELVINA LORENZA PHANG
+              NIM : 215314103
+                <img src="Lorenz.jpeg" alt="Image" width="30%">
+            </h1>
+        </pre>
+            <h2>Berikut adalah Tugas yang dikerjakan : </h2>
+        
+            <label for="nama">Nama : </label>
+            <input type="text" nama="Nama">
+            <br>    
+            <label for="banyakPil">Jumlah Pilihan : </label>
+            <input type="number" id="banyakPil">
+            <br>
+            <button onclick="tampilPil()">OK</button>
+            <div id="pilihan"></div>
+
+
+
+        <script>
+            function tampilPil(){
+                var banyakPil = document.getElementById("banyakPil").value;
+                var pilihan = "";
+                
+                for(var i = 1; i <= banyakPil; i++){
+                    pilihan += "<p> Pilihan " + i + "<input placeholder = 'Masukkan Pilihan' >" + "</p>";
+                }
+                document.getElementById("pilihan").innerHTML = pilihan;
+            }
+
+            function result(){
+                var
+            }
+        </script>
+    </body>
+</html>

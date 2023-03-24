@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODUL 4 JAVA SCRIPT</title>
+</head>
+
+<body>
+    <script>
+        var pil=[];
+        var button = "";
+        var teksPlhn ="";
+        var input="";
+        function tampilPil(){
+            var banyakPil = document.getElementById("banyakPil").value;
+            var pilihan ="";
+            button ='<button onclick="resultBtn()">SHOW</button>';
+            
+            for(var i=1; i<=banyakPil; i++){
+                pilihan += '<p> Pilihan '+i+': <input type="text" id="input'+i+'" placeholder="Masukkan Teks Pilihan"> </p>' ;
+            }
+            pilihan += button;
+            document.getElementById("pilihan").innerHTML = pilihan;
+            
+        }
+        
+        function resultBtn(){
+            var banyakPil = document.getElementById("banyakPil").value;
+            var teksPil = "";
+            
+            button ='<button onclick="result()">YA</button>';
+
+            for (var i = 1; i <= banyakPil; i++) {
+                pil[i-1] = document.getElementById("input"+i).value;
+                input += pil[i-1]+" , ";
+                teksPil +='<p><input type="radio" name="pilihan" value="' + pil[i-1] + '"> ' + pil[i-1] + '</p>';
+            }
+            teksPil += button;
+            document.getElementById("btnRadio").innerHTML = teksPil;
+        }
+
+        function result(){
+            //document.getElementById("frm1").submit();
+            var nama = document.getElementById("nama").value;
+            banyakPil = document.getElementById("banyakPil").value;
+            let pil
+            var radio = document.getElementsByName("pilihan");
+            for(let i=0; i<radio.length; i++){
+                if(radio[i].checked){
+                    teskPlhn = radio[i].value;
+                    pil = teskPlhn
+                }
+            }
+
+            var hasil = 'Hallo, nama saya '+nama+', saya mempunyai sejumlah '+banyakPil+ ' pilihan yaitu ' +input+ ' dan saya memilih ' +pil+ '.'
+
+            document.getElementById("HasilAkhir").innerHTML = hasil;
+        }
+
+//        function ree(){
+ //           const btnRadio = document.getElementById("btnRadio");
+   //        // btnRadio.addEventListener("click", function() {
+     //        //   const data = btnRadio.innerHTML;
+               // console.log("Data dari button adalah: "+ data);
+            //})
+       //     for(let i=0; i<btnRadio.length; i++){
+         //       btnRadio[i].addEventListener("click", function() {
+           //         const selectedValue = this.value;
+             //       peliuu = '<p> Nilai yang dipilih adalah :' + selectedValue + '</p>';
+                    //"Nilai yang dipilih adalah : " + selectedValue);
+               // })
+            //}
+           // document.getElementById("peliuu");
+        //}
+    </script>
+    
+    <pre>
+        <h1>
+          NAMA : ELVINA LORENZA PHANG
+              NIM : 215314103
+                 <img src="Lorenz.jpeg" alt="Image" width="30%">
+        </h1>
+    </pre>
+    <h2>Berikut adalah Tugas yang dikerjakan : </h2>
+
+    <label for="nama">Nama : </label>
+    <input type="text" id="nama" placeholder="
+    Masukkan Nama">
+    <br>
+
+    <label for="banyakPil">Jumlah Pilihan :</label>
+    <input type="number" id="banyakPil" placeholder="Masukkan Jumlah Pilihan">
+    <br>
+    <button onclick="tampilPil()">OK</button>
+    <div id="pilihan"></div>
+
+    <div id="btnRadio"></div>
+    
+    <!--<button onclick="resultBtn()">SHOW</button>
+    
+    
+    <button onclick="ree">RESULT</button>
+    -->
+    <div id="HasilAkhir"></div>
+
+<!--
+    <form id="frm1" action="welcomee">
+        Hallo, nama saya <input type="text" value="nama">, saya mempunyai sejumlah <input type="number" value="banyakPil"> pilihan yaitu <input type="text" value="teksPilihan[i-1] + ,">, dan saya memilih.
+        <input type="button" onclick="result()" value="submit">
+    </form>
+-->
+</body>
+</html>
