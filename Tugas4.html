@@ -55,35 +55,59 @@
                 }
             }
 
-            var hasil = 'Hallo, nama saya '+nama+', saya mempunyai sejumlah '+banyakPil+ ' pilihan yaitu ' +input+ ' dan saya memilih ' +pil+ '.'
+            var hasil = 'Hallo, nama saya '+nama+', saya mempunyai '+banyakPil+ ' pilihan, yaitu ' +input+ ' dan saya memilih ' +pil+ '.'
 
             document.getElementById("HasilAkhir").innerHTML = hasil;
         }
     </script>
+
+    <div class="container">
     <div class="header">
         <pre>
+        <div class="content cf">
+        <div class="main">
             <h1>
-              NAMA : ELVINA LORENZA PHANG
-                    NIM : 215314103
-                     <img src="Lorenz.jpeg" alt="Image" width="30%">
-            </h1>
+    NAMA : ELVINA LORENZA PHANG
+    NIM : 215314103
+        </h1>
+        </div>
+            
+            <div class="sidebar">
+                <img src="Lorenz.jpeg" alt="Image" width="15%">
+            </div>        
+        </div>
         </pre>
     </div>
-    <h2>Berikut adalah Tugas yang dikerjakan : </h2>
-
-    <label for="nama">Nama : </label>
-    <input type="text" id="nama" placeholder="
-    Masukkan Nama">
-    <br>
-
-    <label for="banyakPil">Jumlah Pilihan :</label>
-    <input type="number" id="banyakPil" placeholder="Masukkan Jumlah Pilihan">
-    <br>
-    <button onclick="tampilPil()">OK</button>
-    <div id="pilihan"></div>
-
-    <div id="btnRadio"></div>
     
-    <div id="HasilAkhir"></div>
+    <div class="judul">
+        <h2>Berikut adalah Tugas yang dikerjakan : </h2>
+    </div>
+    
+    <div class="isii">
+        <label for="nama">Nama : </label>
+        <input type="text" id="nama" placeholder="
+        Masukkan Nama">
+        <br>
+
+        <label for="banyakPil">Jumlah Pilihan :</label>
+        <input type="number" id="banyakPil"  placeholder="Masukkan Jumlah Pilihan">
+        <br>
+        <button onclick="tampilPil()">OK</button>
+    
+        <br>
+        <br>
+        <div id="pilihan"></div>
+
+        <br>
+        <div id="btnRadio"></div>
+
+        <br>
+        <div id="HasilAkhir"></div>
+        </div>
+
+        <div class="footer">
+            <p class="akhiran">elvinalorenza.tugasjavascript.215314103.</p>
+        </div>
+    </div>
 </body>
 </html>
